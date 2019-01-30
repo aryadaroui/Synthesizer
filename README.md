@@ -2,9 +2,7 @@
 
 A simple digital, hardware synth for our EE 400D class.
 
-
-
-![SynthBoy](assets/Synth Boy Logo.png)
+![logo](assets/logo.png)
 
 
 
