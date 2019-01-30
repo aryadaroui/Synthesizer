@@ -55,20 +55,27 @@ There are a lot of musical keyboard options on the market. Most synthesizers are
         -   Freq. selection knob
         -   Mix knob
 
+![diagram](assets/diagram.png)
+
+
+
 ```mermaid
 graph LR
 	freqLFO(freq knob)-->LFO[LFO]
 	waveLFO(waveshape rotary switch) --> LFO
 	mixLFO(mix knob) --> LFO
 	
-	keys(12 keys) --> freqCarrier[carrier freq]
+	keys(12 keys) --> freqCarrier[carrier freq select]
 	octave(octave +/- button) --> freqCarrier
 	
 	waveGen(waveshape rotary switch) --> carrier
 	freqCarrier --> carrier
 	
-	carrier --> modulator
-	LFO --> modulator
+	LFO --> carrier
+	carrier --> intEQ[internal EQ]
+	intEQ --> DAC
+    DAC --> extEQ
+
 	
 	
 	subgraph input
@@ -78,6 +85,17 @@ graph LR
 	keys
 	octave
 	waveGen
+	end
+	
+	subgraph Raspberry Pi
+	LFO
+	carrier
+	intEQ
+	DAC
+	end
+	
+	subgraph MIDI controller
+	freqCarrier
 	end
 	
 	subgraph output
