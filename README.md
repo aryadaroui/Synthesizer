@@ -2,6 +2,12 @@
 
 A simple digital, hardware synth for our EE 400D class.
 
+
+
+![SynthBoy](assets/Synth Boy Logo.png)
+
+
+
 ## Proposal
 
 You’re a budding musician and you want to start playing with synths like your dad used to when he was in his Depeche Mode cover band. Unfortunately, all the products on the market are really expensive and complicated. SynthBoy, on the other hand, is an inexpensive, simple, entry-level synthesizer that sounds great!
@@ -24,7 +30,7 @@ There are a lot of musical keyboard options on the market. Most synthesizers are
 
 ## Skills needed
 
--   git
+-   Git
 -   C++
 -   MATLAB
 -   3D-Modeling & printing
