@@ -38,7 +38,7 @@ There are a lot of musical keyboard options on the market. Most synthesizers are
 
 
 
-## I/O
+## I/O and diagram
 
 -   Input
     -   Gen. (Generated signal) signal
@@ -80,8 +80,6 @@ graph LR
 	intEQ --> DAC
     DAC --> extEQ
 
-	
-	
 	subgraph input
 	freqLFO
 	waveLFO
