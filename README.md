@@ -59,25 +59,36 @@ There are a lot of musical keyboard options on the market. Most synthesizers are
         -   Freq. selection knob
         -   Mix knob
 
-![diagram](assets/diagram.png)
-
 
 
 ```mermaid
 graph LR
-	freqLFO(freq knob)-->LFO[LFO]
-	waveLFO(waveshape rotary switch) --> LFO
-	mixLFO(mix knob) --> LFO
+	freqLFO(LFO freq)-.->LFO[LFO]
+	waveLFO(LFO shape) -.-> LFO
+	mixLFO(LFO mix) -.-> LFO
 	
-	keys(12 keys) --> freqCarrier[carrier freq select]
-	octave(octave +/- button) --> freqCarrier
+	keys(24 keys) -.-> freqCarrier[CAR freq]
+	octave(Octave) -.-> freqCarrier
 	
-	waveGen(waveshape rotary switch) --> carrier
-	freqCarrier --> carrier
+	waveGen(CAR shape) -.-> Carrier[FM Carrier]
 	
-	LFO --> carrier
-	carrier --> intEQ[internal EQ]
-	intEQ --> DAC
+	hiFreq(Hi cut freq) -.-> hiCut[Hi cut]
+	ADSR --> hiCut
+	hiMix(Hi cut mix ) -.-> hiCut
+	loFreq(Lo cut freq ) -.-> loCut[Lo cut]
+	hiCut --> loCut
+	loMix(Lo cut mix ) -.-> loCut
+	
+	LFO --> Carrier
+	freqCarrier --> Carrier
+	
+	Attack -.-> ADSR
+	Decay -.-> ADSR
+	Carrier --> ADSR[ADSR Envelope]
+	Sustain -.-> ADSR
+	Release -.-> ADSR
+
+	loCut --> DAC
     DAC --> extEQ
 
 	subgraph input
@@ -87,22 +98,78 @@ graph LR
 	keys
 	octave
 	waveGen
+	hiFreq
+	hiMix
+	loFreq
+	loMix
+	Attack
+	Decay
+	Sustain
+	Release
 	end
 	
 	subgraph Raspberry Pi
 	LFO
-	carrier
-	intEQ
+	Carrier
 	DAC
-	end
-	
-	subgraph MIDI controller
+	ADSR
+	hiCut
+	loCut
 	freqCarrier
 	end
 	
 	subgraph output
-	amp --> speaker
-	extEQ[external EQ] --> amp
+	Amp --> Speaker
+	extEQ[External EQ] --> Amp
 	end
 ```
+
+
+
+```mermaid
+gantt
+dateFormat  MM-DD
+
+section Startup
+Form teams:			done,	01-23,	7d
+Product design:		done,	01-30,	4d
+Write proposal:		active,	01-30,	5d
+Learn Git:			      ,	02-04,	7d
+Review C++:		      	  ,	02-04,	7d
+
+section Synthesis Engine
+Realtime audio structure:	02-10,	7d
+FM Carrier signal:			7d
+LFO signal:					7d
+Waveshaping:				7d
+ADSR Envelope:				7d
+Filters:					7d
+Systems Merge:				7d
+Review and Documentation:	7d
+Final touches:				04-28, 05-06
+
+section Raspberry Pi
+Install and strip OS:		03-31,	7d
+Assign I/O : 				10d
+Review and Documentation:	7d
+Final touches:				04-28, 05-06
+
+section Hardware
+Draft 3D model:				04-07,	5d
+Review & print:				4d
+Attach decal:				2d
+Assembly:					7d
+Documentation:				3d
+Final touches:				04-28, 05-06
+
+section Deliverables
+Final report:				05-06,	05-15
+Final demo:					05-06,	05-15
+```
+
+
+
+
+
+
 
