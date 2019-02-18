@@ -8,7 +8,7 @@ A simple digital, hardware synth for our EE 400D class.
 
 ## Proposal
 
-You’re a budding musician and you want to start playing with synths like your dad used to when he was in his Depeche Mode cover band. Unfortunately, all the products on the market are really expensive and complicated. SynthBoy, on the other hand, is an inexpensive, simple, entry-level synthesizer that sounds great! Dogs are cool.
+You’re a budding musician and you want to start playing with synths like your dad used to when he was in his Depeche Mode cover band. Unfortunately, all the products on the market are really expensive and complicated. SynthBoy, on the other hand, is an inexpensive, simple, entry-level synthesizer that sounds great! Dogs are cool. Cats suck. 2
 
 ### For whom?
 
