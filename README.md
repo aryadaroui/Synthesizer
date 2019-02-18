@@ -1,6 +1,6 @@
 # SynthBoy
 
-A simple digital, hardware synth for our EE 400D class.
+A simple digital, hardware synth for our EE 400D class. yo
 
 ![logo](assets/logo.png)
 
