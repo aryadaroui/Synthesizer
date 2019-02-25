@@ -2415,6 +2415,12 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\SynthSound.h">
+      <Filter>synthboy\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SynthVoice.h">
+      <Filter>synthboy\Source</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\PluginProcessor.h">
       <Filter>synthboy\Source</Filter>
     </ClInclude>

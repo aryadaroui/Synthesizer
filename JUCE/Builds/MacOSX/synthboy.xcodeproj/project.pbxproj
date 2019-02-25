@@ -305,6 +305,20 @@
 			path = "../../JuceLibraryCode/include_juce_opengl.mm";
 			sourceTree = "SOURCE_ROOT";
 		};
+		4F5CC920C4DED2B2FCA74731 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = SynthSound.h;
+			path = ../../Source/SynthSound.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		59A326FA2532304C1741E5BD = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = SynthVoice.h;
+			path = ../../Source/SynthVoice.h;
+			sourceTree = "SOURCE_ROOT";
+		};
 		623F0AEB087954D4D0C48DE3 = {
 			isa = PBXFileReference;
 			lastKnownFileType = wrapper.framework;
@@ -347,6 +361,13 @@
 			path = "Info-Standalone_Plugin.plist";
 			sourceTree = "SOURCE_ROOT";
 		};
+		8D66D1834F03976E9EAFEABF = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_audio_plugin_client_VST_utils.mm";
+			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_VST_utils.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
 		93538AC94652077943A6F0E2 = {
 			isa = PBXFileReference;
 			explicitFileType = wrapper.cfbundle;
@@ -380,13 +401,6 @@
 			lastKnownFileType = file;
 			name = "juce_graphics";
 			path = "../../JuceLibraryCode/modules/juce_graphics";
-			sourceTree = "SOURCE_ROOT";
-		};
-		8D66D1834F03976E9EAFEABF = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.objcpp;
-			name = "include_juce_audio_plugin_client_VST_utils.mm";
-			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_VST_utils.mm";
 			sourceTree = "SOURCE_ROOT";
 		};
 		90D15BB92A056A00A110B9DF = {
@@ -602,6 +616,8 @@
 		E876AE1D4355B72F3380EAE7 = {
 			isa = PBXGroup;
 			children = (
+				4F5CC920C4DED2B2FCA74731,
+				59A326FA2532304C1741E5BD,
 				77C0372E1B62CC68584976D1,
 				2C3125BEAEBD1E7E406ED86C,
 				1009D51A4D14B0437DD176DF,
@@ -769,7 +785,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = (
-					"../../depencies/VST3_SDK",
+					"../../dependencies/VST3_SDK",
 					"../../JuceLibraryCode",
 					"../../JuceLibraryCode/modules",
 					"../../JuceLibraryCode/modules/juce_audio_plugin_client",
@@ -820,7 +836,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = (
-					"../../depencies/VST3_SDK",
+					"../../dependencies/VST3_SDK",
 					"../../JuceLibraryCode",
 					"../../JuceLibraryCode/modules",
 					"../../JuceLibraryCode/modules/juce_audio_plugin_client",
@@ -871,7 +887,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = (
-					"../../depencies/VST3_SDK",
+					"../../dependencies/VST3_SDK",
 					"../../JuceLibraryCode",
 					"../../JuceLibraryCode/modules",
 					"../../JuceLibraryCode/modules/juce_audio_plugin_client",
@@ -923,7 +939,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = (
-					"../../depencies/VST3_SDK",
+					"../../dependencies/VST3_SDK",
 					"../../JuceLibraryCode",
 					"../../JuceLibraryCode/modules",
 					"../../JuceLibraryCode/modules/juce_audio_plugin_client",
@@ -972,7 +988,7 @@
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
-					"../../depencies/VST3_SDK",
+					"../../dependencies/VST3_SDK",
 					"../../JuceLibraryCode",
 					"../../JuceLibraryCode/modules",
 					"../../JuceLibraryCode/modules/juce_audio_plugin_client",
@@ -1017,7 +1033,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
-					"../../depencies/VST3_SDK",
+					"../../dependencies/VST3_SDK",
 					"../../JuceLibraryCode",
 					"../../JuceLibraryCode/modules",
 					"../../JuceLibraryCode/modules/juce_audio_plugin_client",
@@ -1063,7 +1079,7 @@
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
-					"../../depencies/VST3_SDK",
+					"../../dependencies/VST3_SDK",
 					"../../JuceLibraryCode",
 					"../../JuceLibraryCode/modules",
 					"../../JuceLibraryCode/modules/juce_audio_plugin_client",
@@ -1108,7 +1124,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
-					"../../depencies/VST3_SDK",
+					"../../dependencies/VST3_SDK",
 					"../../JuceLibraryCode",
 					"../../JuceLibraryCode/modules",
 					"../../JuceLibraryCode/modules/juce_audio_plugin_client",
