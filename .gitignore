@@ -3,6 +3,9 @@
 *.swp
 .*.swp
 
+# builds
+JUCE/Builds
+
 *.webloc
 *.WEBLOC
 *.DS_Store
