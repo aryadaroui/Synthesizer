@@ -10,6 +10,8 @@
 
 #pragma once
 #include "../JuceLibraryCode/JuceHeader.h"
+#include "../dependencies/maximilian/maximilian.h"
+
 
 class SynthSound : public SynthesiserSound
 {

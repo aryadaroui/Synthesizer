@@ -11,6 +11,8 @@
 #pragma once
 
 #include "../JuceLibraryCode/JuceHeader.h"
+#include "../dependencies/maximilian/maximilian.h"
+
 #include "SynthVoice.h"
 #include "SynthSound.h"
 
