@@ -62,7 +62,7 @@ There are a lot of musical keyboard options on the market. Most synthesizers are
 
 
 ```mermaid
-graph LR
+graph TD
 	freqLFO(LFO freq)-.->LFO[LFO]
 	waveLFO(LFO shape) -.-> LFO
 	mixLFO(LFO mix) -.-> LFO

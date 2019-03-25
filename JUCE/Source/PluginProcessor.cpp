@@ -10,6 +10,7 @@
 
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
+#warning lol y'all suck
 
 //==============================================================================
 SynthboyAudioProcessor::SynthboyAudioProcessor()

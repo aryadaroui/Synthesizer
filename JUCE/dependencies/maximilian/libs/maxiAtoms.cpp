@@ -13,7 +13,8 @@
 #include "sineTable.h"
 #ifdef __APPLE_CC__
 #include <Accelerate/Accelerate.h>
-#warning ofxMaxim: Please link against the accelerate framework.
+//#warning ofxMaxim: Please link against the accelerate framework.
+// Arya did this^ we dont need MORE warning messages
 #endif
 
 //#include "tinyxml.h"
