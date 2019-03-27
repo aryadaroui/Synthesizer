@@ -26,6 +26,7 @@ public:
         level = .5;
 		frequency  = MidiMessage::getMidiNoteInHertz(midiNoteNumber);
 //        std::cout << "key: " <<  midiNoteNumber << " at "  << frequency << " Hz." <<  std::endl;
+		
 	}
 	
 	void stopNote (float velocity, bool allowTailOff)
@@ -48,17 +49,20 @@ public:
 	{
         double theWave;
         // fuck that^?
-        
+		double theSound; // For compatibility with ADSR
+		theSound = theWave;
+		double filteredSound;
 //        std::cout << "rendering block" << std::endl;
         
         for (int sample = 0; sample < numSamples; ++sample)
         {
-            theWave = car.sinewave(frequency) * level;
-            
+            theWave = car.square(frequency) * level;
+			filteredSound = filter1.lores(theSound, 2000, 0.1); //low pass filter at 400Hz
+
             for (int channel = 0; channel < outputBuffer.getNumChannels(); ++ channel)
             {
-                
-                outputBuffer.addSample(channel, startSample, theWave);
+				
+                outputBuffer.addSample(channel, startSample, filteredSound);
             }
             ++startSample;
         }
@@ -69,5 +73,5 @@ private:
 	double frequency;
     maxiOsc car;
     maxiOsc LFO;
-	maxiFilter highCut; // Low Pass Filter
+	maxiFilter filter1; // Test Filter
 };

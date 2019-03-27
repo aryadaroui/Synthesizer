@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="b3lFpp" name="synthboy" projectType="audioplug" jucerVersion="5.4.3"
-              companyName="EE 400D" pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn">
+              companyName="EE 400D" pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
+              pluginFormats="buildAU,buildVST3">
   <MAINGROUP id="p7YIuu" name="synthboy">
     <GROUP id="{64232C32-CA57-16C6-E495-23E2F78639BD}" name="Source">
       <FILE id="mGsCso" name="SynthSound.h" compile="0" resource="0" file="Source/SynthSound.h"/>
