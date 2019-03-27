@@ -69,4 +69,5 @@ private:
 	double frequency;
     maxiOsc car;
     maxiOsc LFO;
+	maxiFilter highCut; // Low Pass Filter
 };

@@ -9,10 +9,10 @@
 namespace BinaryData
 {
     extern const char*   bigFiles_txt;
-    const int            bigFiles_txtSize = 224586;
+    const int            bigFiles_txtSize = 226264;
 
     extern const char*   README_txt;
-    const int            README_txtSize = 3042;
+    const int            README_txtSize = 3115;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
     const int namedResourceListSize = 2;
