@@ -21,11 +21,12 @@ public:
 		return dynamic_cast<SynthSound*>(sound) != nullptr;
 	}
 	
+	//======================================================================================
 	void startNote (int midiNoteNumber, float velocity, SynthesiserSound *sound, int currentPitchwheelPosition)
 	{
         level = .5;
 		frequency  = MidiMessage::getMidiNoteInHertz(midiNoteNumber);
-//        std::cout << "key: " <<  midiNoteNumber << " at "  << frequency << " Hz." <<  std::endl;
+        std::cout << "key: " <<  midiNoteNumber << " at "  << frequency << " Hz." <<  std::endl;
 		
 	}
 	
@@ -35,6 +36,7 @@ public:
 		clearCurrentNote();
 	}
 	
+	//=======================================================================================
 	void pitchWheelMoved (int newPitchWheelValue)
 	{
 		
@@ -47,8 +49,8 @@ public:
 
 	void renderNextBlock (AudioBuffer<float> &outputBuffer, int startSample, int numSamples)
 	{
+		// TO DO: Windows Distribution off by 30Hz at 440Hz (A4). Error is multiplicative with octave.
         double theWave;
-        // fuck that^?
 		double theSound; // For compatibility with ADSR
 		theSound = theWave;
 		double filteredSound;
@@ -56,10 +58,11 @@ public:
         
         for (int sample = 0; sample < numSamples; ++sample)
         {
-            theWave = car.square(frequency) * level;
-			filteredSound = filter1.lores(theSound, 2000, 0.1); //low pass filter at 400Hz
-
-            for (int channel = 0; channel < outputBuffer.getNumChannels(); ++ channel)
+            theWave = car.sinewave(frequency) * level;
+			//filteredSound = filter1.lores(theSound, 2000, 0.1); //low pass filter at 400Hz
+			filteredSound = theWave;
+            
+			for (int channel = 0; channel < outputBuffer.getNumChannels(); ++ channel)
             {
 				
                 outputBuffer.addSample(channel, startSample, filteredSound);

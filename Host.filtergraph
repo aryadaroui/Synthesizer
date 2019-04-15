@@ -46,10 +46,10 @@
       </OUTPUTS>
     </LAYOUT>
   </FILTER>
-  <FILTER uid="4" x="0.31067961165048540995" y="0.40732758620689657469">
+  <FILTER uid="5" x="0.89693801344286783195" y="1.05818965517241370122">
     <PLUGIN name="synthboy" format="VST3" category="Instrument|Synth" manufacturer="EE 400D"
             version="1.0.0" file="C:\Users\mrmis\Documents\GitHub\synthboy\JUCE\Builds\VisualStudio2017\x64\Debug\VST3\synthboy.vst3"
-            uid="e9514670" isInstrument="1" fileTime="169c0a151ea" infoUpdateTime="169c0a1e232"
+            uid="e9514670" isInstrument="1" fileTime="169c0cd5f63" infoUpdateTime="169c0cef07e"
             numInputs="0" numOutputs="2" isShell="0"/>
     <STATE>152.VMjLg7H....OVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9XCLt3hKt3hKt3hKt3hYRUUSTEETIckVwTjQisVTTgkdEYjKAQjYPQSPWgUdMcjKAQjct3hdA4hKt3hKt3hKtnTUv.UQAslXuk0UXoWUFE0YQcEV77RRC8Vav8lak4Fc9vyKVMEUy.Ea0cVZtMEcgQWY9..</STATE>
     <LAYOUT>
@@ -59,7 +59,21 @@
       </OUTPUTS>
     </LAYOUT>
   </FILTER>
-  <CONNECTION srcFilter="2" srcChannel="4096" dstFilter="4" dstChannel="4096"/>
-  <CONNECTION srcFilter="4" srcChannel="0" dstFilter="3" dstChannel="0"/>
-  <CONNECTION srcFilter="4" srcChannel="1" dstFilter="3" dstChannel="1"/>
+  <FILTER uid="6" x="0.32038834951456313105" y="0.41594827586206895020"
+          uiLastX_Normal="974" uiLastY_Normal="251" uiopen_Normal="0">
+    <PLUGIN name="synthboy" format="VST3" category="Instrument|Synth" manufacturer="EE 400D"
+            version="1.0.0" file="C:\Users\mrmis\Documents\GitHub\synthboy\JUCE\Builds\VisualStudio2017\x64\Debug\VST3\synthboy.vst3"
+            uid="e9514670" isInstrument="1" fileTime="169c0cd5f63" infoUpdateTime="169c0cef07f"
+            numInputs="0" numOutputs="2" isShell="0"/>
+    <STATE>152.VMjLg7H....OVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9XCLt3hKt3hKt3hKt3hYRUUSTEETIckVwTjQisVTTgkdEYjKAQjYPQSPWgUdMcjKAQjct3hdA4hKt3hKt3hKtnTUv.UQAslXuk0UXoWUFE0YQcEV77RRC8Vav8lak4Fc9vyKVMEUy.Ea0cVZtMEcgQWY9..</STATE>
+    <LAYOUT>
+      <INPUTS/>
+      <OUTPUTS>
+        <BUS index="0" layout="L R"/>
+      </OUTPUTS>
+    </LAYOUT>
+  </FILTER>
+  <CONNECTION srcFilter="2" srcChannel="4096" dstFilter="6" dstChannel="4096"/>
+  <CONNECTION srcFilter="6" srcChannel="0" dstFilter="3" dstChannel="0"/>
+  <CONNECTION srcFilter="6" srcChannel="1" dstFilter="3" dstChannel="1"/>
 </FILTERGRAPH>

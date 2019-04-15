@@ -1,6 +1,7 @@
 /*
   ==============================================================================
-
+  plugin PROCESSOR
+  WHere majority of DSP happens
     This file was auto-generated!
 
     It contains the basic framework code for a JUCE plugin processor.
@@ -144,6 +145,8 @@ bool SynthboyAudioProcessor::isBusesLayoutSupported (const BusesLayout& layouts)
 
 void SynthboyAudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuffer& midiMessages)
 {
+	// This is where output through speakers happens
+
 //    ScopedNoDenormals noDenormals;
 //    auto totalNumInputChannels  = getTotalNumInputChannels();
 //    auto totalNumOutputChannels = getTotalNumOutputChannels();
