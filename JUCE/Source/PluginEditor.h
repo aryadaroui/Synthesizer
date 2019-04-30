@@ -1,6 +1,7 @@
 /*
   ==============================================================================
-
+  Plugin EDITOR
+  UI, Graphical elements (Sliders and dials)
     This file was auto-generated!
 
     It contains the basic framework code for a JUCE plugin editor.
@@ -19,6 +20,7 @@
 */
 class SynthboyAudioProcessorEditor : public AudioProcessorEditor, public Slider::Listener
 {
+	
 public:
     SynthboyAudioProcessorEditor (SynthboyAudioProcessor&);
     ~SynthboyAudioProcessorEditor();

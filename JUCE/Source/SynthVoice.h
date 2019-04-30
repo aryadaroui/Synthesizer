@@ -21,6 +21,7 @@ public:
 		return dynamic_cast<SynthSound*>(sound) != nullptr;
 	}
 	
+	//======================================================================================
 	void startNote (int midiNoteNumber, float velocity, SynthesiserSound *sound, int currentPitchwheelPosition)
 	{
         level = .5;
@@ -35,6 +36,7 @@ public:
 		clearCurrentNote();
 	}
 	
+	//=======================================================================================
 	void pitchWheelMoved (int newPitchWheelValue)
 	{
 		
@@ -47,15 +49,16 @@ public:
 
 	void renderNextBlock (AudioBuffer<float> &outputBuffer, int startSample, int numSamples)
 	{
+		// TO DO: Windows Distribution off by 30Hz at 440Hz (A4). Error is multiplicative with octave.
         double theWave;
         
         for (int sample = 0; sample < numSamples; ++sample)
         {
             theWave = car.triangle(frequency) * level;
             
-            for (int channel = 0; channel < outputBuffer.getNumChannels(); ++ channel)
+			for (int channel = 0; channel < outputBuffer.getNumChannels(); ++ channel)
             {
-                
+				
                 outputBuffer.addSample(channel, startSample, theWave);
             }
             ++startSample;
