@@ -65,6 +65,9 @@ private:
 	
 	double lastSampleRate;
 	
+public:
+	double lfoFreq;
+
 	//==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SynthboyAudioProcessor)
 };

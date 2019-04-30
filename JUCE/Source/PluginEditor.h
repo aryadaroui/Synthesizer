@@ -41,14 +41,14 @@ private:
     Slider sustain;
     Slider release;
 
-    Slider LowCutFrequency;
+    Slider LowCutFreq;
     Slider LowCutDepth;
-    Slider HighCutFrequency;
+    Slider HighCutFreq;
     Slider HighCutDepth;
 
     Slider carShape;
     Slider lfoShape;
-    Slider lfoFrequency;
+    Slider lfoFreq;
     Slider lfoAttack;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SynthboyAudioProcessorEditor)

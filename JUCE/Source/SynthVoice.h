@@ -25,9 +25,9 @@ public:
 	void startNote (int midiNoteNumber, float velocity, SynthesiserSound *sound, int currentPitchwheelPosition)
 	{
         level = .5;
-		frequency  = MidiMessage::getMidiNoteInHertz(midiNoteNumber); // gets the midi note and converts it to the frequency in Hz it should be
+		carFreq  = MidiMessage::getMidiNoteInHertz(midiNoteNumber); // gets the midi note and converts it to the carFreq in Hz it should be
         
-//        std::cout << "key: " <<  midiNoteNumber << " at "  << frequency << " Hz." <<  std::endl; // for debug
+        std::cout << "key: " <<  midiNoteNumber << " @ "  << carFreq << " Hz. w/ lfoFreq " << lfoFreq <<  std::endl; // for debug
 	}
 	
 	void stopNote (float velocity, bool allowTailOff)
@@ -54,7 +54,7 @@ public:
         
         for (int sample = 0; sample < numSamples; ++sample)
         {
-            theWave = car.triangle(frequency) * level;
+            theWave = car.sinewave(carFreq * lfo.sinewave(lfoFreq)) * level;
             
 			for (int channel = 0; channel < outputBuffer.getNumChannels(); ++ channel)
             {
@@ -64,10 +64,18 @@ public:
             ++startSample;
         }
 	}
+	
+	
+	void getParams(double* lfoFreqNew)
+	{
+		lfoFreq = *lfoFreqNew;
+	}
 
 private:
 	double level;
-	double frequency;
+	double carFreq;
+	double lfoFreq;
+	
     maxiOsc car; // carrier wave
-    maxiOsc LFO; // LFO wave
+    maxiOsc lfo; // LFO wave
 };

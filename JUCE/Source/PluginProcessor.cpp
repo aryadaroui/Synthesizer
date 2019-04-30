@@ -26,6 +26,7 @@ SynthboyAudioProcessor::SynthboyAudioProcessor()
                        )
 #endif
 {
+	lfoFreq = 1;
 	mySynth.clearVoices();
 	
 	for (int i = 0; i < 5; i++) {
@@ -173,6 +174,17 @@ void SynthboyAudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuffe
 //
 //        // ..do something to the data...
 //    }
+	for (int i = 0; i < mySynth.getNumVoices(); i++)
+	{
+			//if myVoice sucessfully casts as a SynthVoice*, get the voice and set the params
+		if ((myVoice = dynamic_cast<SynthVoice*>(mySynth.getVoice(i))))
+		{
+
+			myVoice->getParams(&lfoFreq);
+			
+		}
+	}
+	
 	
 	buffer.clear();
 	mySynth.renderNextBlock(buffer, midiMessages, 0, buffer.getNumSamples());
