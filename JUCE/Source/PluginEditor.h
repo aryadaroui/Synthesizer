@@ -14,6 +14,15 @@
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "../dependencies/maximilian/maximilian.h"
 #include "PluginProcessor.h"
+//
+//
+//
+//class OtherLookAndFeel : public LookAndFeel_V4
+//{
+//	
+//};
+
+
 
 //==============================================================================
 /**
@@ -35,21 +44,24 @@ private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
     SynthboyAudioProcessor& processor;
-    
+	
+	Slider LoCutFreq;
+	Slider LoCutDepth;
+	Slider HiCutFreq;
+	Slider HiCutDepth;
+	
     Slider attack;
     Slider decay;
     Slider sustain;
     Slider release;
 
-    Slider LowCutFreq;
-    Slider LowCutDepth;
-    Slider HighCutFreq;
-    Slider HighCutDepth;
+	Slider lfoShape;
+	Slider lfoBlend;
+	Slider lfoFreq;
+	Slider lfoCreep;
 
     Slider carShape;
-    Slider lfoShape;
-    Slider lfoFreq;
-    Slider lfoAttack;
+	Slider carLevel;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SynthboyAudioProcessorEditor)
 };

@@ -46,10 +46,11 @@
       </OUTPUTS>
     </LAYOUT>
   </FILTER>
-  <FILTER uid="4" x="0.41249999999999997780" y="0.46346153846153848033">
+  <FILTER uid="4" x="0.41268292682926827064" y="0.46401225114854516285"
+          uiLastX_Normal="107" uiLastY_Normal="83" uiopen_Normal="0">
     <PLUGIN name="synthboy" format="VST3" category="Instrument|Synth" manufacturer="EE 400D"
             version="1.0.0" file="/Users/aryadaroui/Library/Audio/Plug-Ins/VST3/synthboy.vst3"
-            uid="acf2ee5c" isInstrument="1" fileTime="16953b98508" infoUpdateTime="16953ba2709"
+            uid="acf2ee5c" isInstrument="1" fileTime="16a70140f60" infoUpdateTime="16a701481de"
             numInputs="0" numOutputs="2" isShell="0"/>
     <STATE>152.VMjLg7H....OVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9XCLt3hKt3hKt3hKt3hYRUUSTEETIckVwTjQisVTTgkdEYjKAQjYPQSPWgUdMcjKAQjct3hdA4hKt3hKt3hKtnTUv.UQAslXuk0UXoWUFE0YQcEV77RRC8Vav8lak4Fc9vyKVMEUy.Ea0cVZtMEcgQWY9..</STATE>
     <LAYOUT>

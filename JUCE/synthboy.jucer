@@ -40,6 +40,9 @@
       <FILE id="xKydi4" name="stb_vorbis.c" compile="1" resource="0" file="dependencies/maximilian/stb_vorbis.c"/>
       <FILE id="LZCb7V" name="stb_vorbis.h" compile="0" resource="0" file="dependencies/maximilian/stb_vorbis.h"/>
     </GROUP>
+    <GROUP id="{35DDDA0D-ED2F-A8CB-B45D-DDB7DFB9C80C}" name="assets">
+      <FILE id="uAjqnP" name="synthboy UI.png" compile="0" resource="1" file="assets/synthboy UI.png"/>
+    </GROUP>
   </MAINGROUP>
   <EXPORTFORMATS>
     <XCODE_MAC targetFolder="Builds/MacOSX" vst3Folder="dependencies/VST3_SDK">

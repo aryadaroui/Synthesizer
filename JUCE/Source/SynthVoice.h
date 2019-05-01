@@ -13,6 +13,8 @@
 #include "../dependencies/maximilian/maximilian.h"
 #include "SynthSound.h"
 
+enum shape {PULSE, SQUARE, SINE, TRIANGLE, RAMP};
+
 class SynthVoice : public SynthesiserVoice
 {
 public:
@@ -46,7 +48,7 @@ public:
 	{
 		
 	}
-
+	
 	void renderNextBlock (AudioBuffer<float> &outputBuffer, int startSample, int numSamples)
 	{
 		// TO DO: Windows Distribution off by 30Hz at 440Hz (A4). Error is multiplicative with octave.
@@ -63,8 +65,8 @@ public:
             }
             ++startSample;
         }
+		
 	}
-	
 	
 	void getParams(double* lfoFreqNew)
 	{
@@ -78,4 +80,10 @@ private:
 	
     maxiOsc car; // carrier wave
     maxiOsc lfo; // LFO wave
+	
+	maxiEnv carEnv;
+	maxiEnv lfoEnv;
+	
+	shape carShape;
+	shape lfoShape;
 };

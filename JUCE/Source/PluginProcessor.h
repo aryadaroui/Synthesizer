@@ -67,6 +67,8 @@ private:
 	
 public:
 	double lfoFreq;
+	shape carShape;
+	shape lfoShape;
 
 	//==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SynthboyAudioProcessor)

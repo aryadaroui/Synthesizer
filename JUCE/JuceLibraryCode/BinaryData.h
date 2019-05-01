@@ -14,8 +14,11 @@ namespace BinaryData
     extern const char*   README_txt;
     const int            README_txtSize = 3042;
 
+    extern const char*   synthboy_UI_png;
+    const int            synthboy_UI_pngSize = 98974;
+
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 2;
+    const int namedResourceListSize = 3;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];
